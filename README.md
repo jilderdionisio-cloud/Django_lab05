@@ -70,12 +70,9 @@ La API está disponible bajo el prefijo `/api/`. Los endpoints para películas s
 - Consulta en postman
 ![DELETE Postman](doc/delete.png)
 
-*Nota: Si alguna imagen no se muestra correctamente, verifica que el archivo esté en la carpeta `doc/` con el nombre exacto.*
-
-## Equipo
-
 - **Naomi Veliz**
-- **Jilder Dionisio**
+
+
 - **Adrina Chinchayguara**
 
 Cada miembro contribuyó en las diferentes fases del desarrollo, incluyendo el diseño del modelo, implementación de la API y documentación.
