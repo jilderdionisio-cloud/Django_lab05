@@ -34,49 +34,6 @@ La API está disponible bajo el prefijo `/api/`. Los endpoints para películas s
 - `PATCH /api/movies/{id}/`: Actualiza parcialmente una película
 - `DELETE /api/movies/{id}/`: Elimina una película
 
-## Probar con Postman
-
-Sigue estos pasos para probar la API desde Postman:
-
-1. Abre Postman.
-2. Inicia el servidor de Django:
-   ```bash
-   python manage.py runserver
-   ```
-3. En Postman, crea una nueva petición `GET` a:
-   ```text
-   http://127.0.0.1:8000/api/movies/
-   ```
-4. Haz clic en `Send` para ver la lista de películas.
-
-### Crear película (POST)
-
-1. Crea una nueva petición `POST` a:
-   ```text
-   http://127.0.0.1:8000/api/movies/
-   ```
-2. En la pestaña `Body`, selecciona `raw` y `JSON`.
-3. Ingresa los datos de la película.
-4. Haz clic en `Send`.
-
-### Actualizar película (PUT)
-
-1. Crea una petición `PUT` a:
-   ```text
-   http://127.0.0.1:8000/api/movies/1/
-   ```
-2. En la pestaña `Body`, selecciona `raw` y `JSON`.
-3. Ingresa todos los campos con los nuevos datos.
-4. Haz clic en `Send`.
-
-### Eliminar película (DELETE)
-
-1. Crea una petición `DELETE` a:
-   ```text
-   http://127.0.0.1:8000/api/movies/1/
-   ```
-2. Haz clic en `Send`.
-
 ## Evidencia de Trabajo
 
 ### Jilder Dionisio ROJAS
@@ -87,23 +44,30 @@ Sigue estos pasos para probar la API desde Postman:
 ![Entregable 2](doc/entregable2.png)
 
 #### Operaciones en Base de Datos - GET (Listar películas)
-
+- Cambio en la base de datos 
 ![DB GET](doc/db.get.png)
+- Consulta en postamn 
 ![GET Postman](doc/get.png)
 
 #### Operaciones en Base de Datos - POST (Crear película)
 
+- Cambio en la base de datos
 ![DB POST](doc/db.post.png)
+- Consulta en postman
 ![POST Postman](doc/Post.png)
 
 #### Operaciones en Base de Datos - PUT (Actualizar película)
 
+- Cambio en la base de datos
 ![DB PUT](doc/db.put.png)
+- Consulta en postman
 ![PUT Postman](doc/put.png)
 
 #### Operaciones en Base de Datos - DELETE (Eliminar película)
 
+- Cambio en la base de datos
 ![DB DELETE](doc/db.delete.png)
+- Consulta en postman
 ![DELETE Postman](doc/delete.png)
 
 *Nota: Si alguna imagen no se muestra correctamente, verifica que el archivo esté en la carpeta `doc/` con el nombre exacto.*
