@@ -71,6 +71,28 @@ La API está disponible bajo el prefijo `/api/`. Los endpoints para películas s
 ![DELETE Postman](doc/delete.png)
 
 - **Naomi Veliz**
+![Entregable 1](doc2/api.png)
+![Entregable 2](doc2/movies.png)
+#### Operaciones en Base de Datos - GET (Listar películas)
+- Añadir películas
+![dbGET](doc2/dbsqlite3.png)
+- Consulta en postamn 
+![GET](doc2/postmanGET.png)
+#### Operaciones en Base de Datos - POST (Crear película)
+ -Usando POST en postamn 
+![POST](doc2/postmanPOST.png)
+-Cambio en la base de datos
+![dbPOST](doc2/dbsqlite3POST.png)
+#### Operaciones en Base de Datos - PUT (Actualizar película)
+-Usando PUT en postamn 
+![PUT](doc2/postmanPUT.png)
+-Cambios en la base de datos
+![dbPUT](doc2/dbsqlite3PUT.png)
+#### Operaciones en Base de Datos - DELETE (Eliminar película)
+-Usando DELETE en postamn 
+![DELETE](doc2/postmanDELETE.png)
+-Cambios en la base de datos
+![dbDELETE](doc2/dbsqlite3DELETE.png)
 
 
 - **Adrina Chinchayguara**
