@@ -1,49 +1,117 @@
-# Django Lab 05 - CineSpoilers
+# CineSpoilers
 
-## Descripción General
+## Descripción
 
-Este repositorio contiene el trabajo del Lab 05 de Django, desarrollado por el equipo conformado por:
+CineSpoilers es una API REST desarrollada con Django y Django REST Framework que permite gestionar un catálogo de películas. El proyecto implementa operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para el modelo de Película.
 
-- **Jilder Dionisio ROJAS**
+## Características
+
+- **Modelo de Película**: Incluye campos como título, sinopsis, duración en minutos, fecha de lanzamiento, estado activo, y timestamps de creación y actualización.
+- **API RESTful**: Endpoints para gestionar películas con operaciones CRUD completas.
+- **Serialización**: Uso de serializers de DRF para validar y formatear los datos.
+- **Base de Datos**: SQLite por defecto, con migraciones de Django.
+
+## Modelo de Datos
+
+### Movie
+- `id`: Identificador único (auto-generado)
+- `title`: Título de la película (CharField, max 255 caracteres)
+- `synopsis`: Sinopsis de la película (TextField)
+- `duration_minutes`: Duración en minutos (PositiveIntegerField)
+- `release_date`: Fecha de lanzamiento (DateField)
+- `is_active`: Estado activo (BooleanField, por defecto True)
+- `created_at`: Fecha de creación (DateTimeField, auto_now_add)
+- `updated_at`: Fecha de actualización (DateTimeField, auto_now)
+
+## Endpoints de la API
+
+La API está disponible bajo el prefijo `/api/`. Los endpoints para películas son:
+
+- `GET /api/movies/`: Lista todas las películas activas
+- `POST /api/movies/`: Crea una nueva película
+- `GET /api/movies/{id}/`: Obtiene detalles de una película específica
+- `PUT /api/movies/{id}/`: Actualiza una película completa
+- `PATCH /api/movies/{id}/`: Actualiza parcialmente una película
+- `DELETE /api/movies/{id}/`: Elimina una película
+
+## Probar con Postman
+
+Sigue estos pasos para probar la API desde Postman:
+
+1. Abre Postman.
+2. Inicia el servidor de Django:
+   ```bash
+   python manage.py runserver
+   ```
+3. En Postman, crea una nueva petición `GET` a:
+   ```text
+   http://127.0.0.1:8000/api/movies/
+   ```
+4. Haz clic en `Send` para ver la lista de películas.
+
+### Crear película (POST)
+
+1. Crea una nueva petición `POST` a:
+   ```text
+   http://127.0.0.1:8000/api/movies/
+   ```
+2. En la pestaña `Body`, selecciona `raw` y `JSON`.
+3. Ingresa los datos de la película.
+4. Haz clic en `Send`.
+
+### Actualizar película (PUT)
+
+1. Crea una petición `PUT` a:
+   ```text
+   http://127.0.0.1:8000/api/movies/1/
+   ```
+2. En la pestaña `Body`, selecciona `raw` y `JSON`.
+3. Ingresa todos los campos con los nuevos datos.
+4. Haz clic en `Send`.
+
+### Eliminar película (DELETE)
+
+1. Crea una petición `DELETE` a:
+   ```text
+   http://127.0.0.1:8000/api/movies/1/
+   ```
+2. Haz clic en `Send`.
+
+## Evidencia de Trabajo
+
+### Jilder Dionisio ROJAS
+
+#### Entregables
+
+![Entregable 1](doc/entregable.png)
+![Entregable 2](doc/entregable2.png)
+
+#### Operaciones en Base de Datos - GET (Listar películas)
+
+![DB GET](doc/db.get.png)
+![GET Postman](doc/get.png)
+
+#### Operaciones en Base de Datos - POST (Crear película)
+
+![DB POST](doc/db.post.png)
+![POST Postman](doc/Post.png)
+
+#### Operaciones en Base de Datos - PUT (Actualizar película)
+
+![DB PUT](doc/db.put.png)
+![PUT Postman](doc/put.png)
+
+#### Operaciones en Base de Datos - DELETE (Eliminar película)
+
+![DB DELETE](doc/db.delete.png)
+![DELETE Postman](doc/delete.png)
+
+*Nota: Si alguna imagen no se muestra correctamente, verifica que el archivo esté en la carpeta `doc/` con el nombre exacto.*
+
+## Equipo
+
 - **Naomi Veliz**
+- **Jilder Dionisio**
 - **Adrina Chinchayguara**
 
-Cada miembro ha implementado su versión del proyecto CineSpoilers, una API REST para gestionar películas utilizando Django y Django REST Framework.
-
-## Estructura del Repositorio
-
-- `Jilder Dionisio ROJAS/`: Implementación de Jilder Dionisio.
-- `Naomi Veliz/`: Implementación de Naomi Veliz.
-- `Adrina Chinchayguara/`: Implementación de Adrina Chinchayguara.
-
-## Características Comunes
-
-Cada implementación incluye:
-- Modelo de Película con campos como título, sinopsis, duración, fecha de lanzamiento, etc.
-- Endpoints CRUD para gestionar películas.
-- API RESTful utilizando Django REST Framework.
-- Base de datos SQLite.
-
-## Instalación y Uso
-
-Para cada carpeta:
-1. Navega a la carpeta correspondiente.
-2. Crea un entorno virtual: `python -m venv .venv`
-3. Activa el entorno: `.venv\Scripts\activate` (Windows)
-4. Instala dependencias: `pip install -r requirements.txt`
-5. Ejecuta migraciones: `python manage.py migrate`
-6. Ejecuta el servidor: `python manage.py runserver`
-
-La API estará disponible en `http://127.0.0.1:8000/api/movies/`.
-
-## Contribución
-
-Cada miembro es responsable de su carpeta. Para contribuir:
-1. Trabaja en tu carpeta asignada.
-2. Commit y push tus cambios.
-3. Coordina con el equipo para actualizaciones generales.
-
-## Licencia
-
-Este proyecto es para fines educativos.</content>
-<parameter name="filePath">c:\Tecsup\Django -proyects\Lab-05\cinespoilers\README.md
+Cada miembro contribuyó en las diferentes fases del desarrollo, incluyendo el diseño del modelo, implementación de la API y documentación.
